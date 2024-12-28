@@ -1,5 +1,8 @@
 .fseventsd
 .Spotlight-V100
 .Trashes
+*.tar.gz
+*.zip
 # ignore backup directories
 *[A-Z][a-z][a-z][0-9][0-9]_[0-9][0-9][0-9][0-9]/
+*.DS_Store*
