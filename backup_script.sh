@@ -9,7 +9,7 @@ BACKUP_DEST="${BASE_BACKUP_DEST}/${DATE}"
 
 if [ -e "${BACKUP_DEST}" ]; then
     echo "Backup destination already exists: ${BACKUP_DEST}"
-    # exit 1
+    exit 1
 fi
 
 # Ensure the backup destination exists
@@ -30,7 +30,7 @@ for SOURCE in "${SOURCE_DIRS[@]}"; do
     DEST="${BACKUP_DEST}/iCloud_MacBookFiles/$FOLDER_NAME"
     mkdir -p "${DEST}"
     echo "Backing up $SOURCE to $DEST..."
-    # rsync -a --progress --info=progress2 --log-file="${DEST}/backup.log" --exclude=".DS_Store" --exclude="*.tmp" "$SOURCE" "${DEST}"
+    rsync -a --progress --info=progress2 --log-file="${DEST}/backup.log" --exclude=".DS_Store" --exclude="*.tmp" "$SOURCE" "${DEST}"
 
     # Verify the backup using diff
     echo "Verifying backup for $SOURCE..."

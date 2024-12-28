@@ -6,7 +6,7 @@ Downaloding all contents to MacBook from iCloud might take a day or two
 
 Note: the backup script does not copy the photos library. That must be manually copied due to permission errors even with sudo
 
-### Downlaod all Photos from iCloud
+### Download all Photos from iCloud
 
 Photos -> Settings -> iCloud -> Download Originals to this Mac
 
